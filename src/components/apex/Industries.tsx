@@ -59,8 +59,9 @@ const IndustryCard = ({
       </p>
     </div>
 
-    <a
-      href="#"
+    <button
+      type="button"
+      onClick={onLearnMore}
       style={{
         color: "var(--color-gold)",
         fontSize: "0.85rem",
@@ -73,14 +74,20 @@ const IndustryCard = ({
         zIndex: 2,
         marginTop: "2rem",
         fontWeight: 600,
+        background: "transparent",
+        border: "none",
+        cursor: "pointer",
+        padding: 0,
+        alignSelf: "flex-start",
       }}
     >
       Learn More <span>→</span>
-    </a>
+    </button>
   </div>
 );
 
-export default function Industries() {
+export default function Industries({ onOpenBooking }: { onOpenBooking?: () => void }) {
+
   return (
     <section
       id="industries"
