@@ -64,7 +64,7 @@ function Index() {
       </main>
 
       <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
-      <UsagePlansModal isOpen={isPlansOpen} onClose={() => setIsPlansOpen(false)} />
+      <UsagePlansModal isOpen={isPlansOpen} onClose={() => setIsPlansOpen(false)} onSelectPlan={open} />
     </div>
   );
 }
