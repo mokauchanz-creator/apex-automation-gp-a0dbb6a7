@@ -239,10 +239,32 @@ export default function Navbar({
               <button
                 onClick={() => {
                   setOpen(false);
-                  onOpenBooking();
+                  onOpenPlans();
                 }}
                 style={{
                   marginTop: "2rem",
+                  padding: "1.1rem 1.5rem",
+                  backgroundColor: "transparent",
+                  color: "var(--color-gold)",
+                  fontWeight: 600,
+                  fontSize: "0.95rem",
+                  letterSpacing: 1,
+                  textTransform: "uppercase",
+                  borderRadius: 4,
+                  border: "1px solid var(--color-gold)",
+                  cursor: "pointer",
+                  minHeight: 52,
+                }}
+              >
+                Usage Plans
+              </button>
+              <button
+                onClick={() => {
+                  setOpen(false);
+                  onOpenBooking();
+                }}
+                style={{
+                  marginTop: "0.75rem",
                   padding: "1.1rem 1.5rem",
                   backgroundColor: "var(--color-gold)",
                   color: "#000",
@@ -258,6 +280,7 @@ export default function Navbar({
               >
                 Book Demo
               </button>
+
             </motion.div>
           </motion.div>
         )}
