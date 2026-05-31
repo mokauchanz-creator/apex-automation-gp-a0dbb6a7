@@ -91,6 +91,25 @@ export default function Navbar({
               className="book-demo-desktop"
               style={{
                 padding: "0.75rem 1.4rem",
+                backgroundColor: "transparent",
+                color: "var(--color-gold)",
+                fontWeight: 600,
+                fontSize: "0.8rem",
+                letterSpacing: "1px",
+                textTransform: "uppercase",
+                borderRadius: 2,
+                border: "1px solid var(--color-gold)",
+                cursor: "pointer",
+                minHeight: 44,
+              }}
+              onClick={onOpenPlans}
+            >
+              Usage Plans
+            </button>
+            <button
+              className="book-demo-desktop"
+              style={{
+                padding: "0.75rem 1.4rem",
                 backgroundColor: "var(--color-gold)",
                 color: "#000",
                 fontWeight: 600,
@@ -106,6 +125,7 @@ export default function Navbar({
             >
               Book Demo
             </button>
+
             <button
               aria-label="Open menu"
               className="mobile-toggle"
