@@ -13,6 +13,8 @@ import Industries from "@/components/apex/Industries";
 import CTA from "@/components/apex/CTA";
 import BookingModal from "@/components/apex/BookingModal";
 import CustomCursor from "@/components/apex/CustomCursor";
+import UsagePlansModal from "@/components/apex/UsagePlansModal";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
