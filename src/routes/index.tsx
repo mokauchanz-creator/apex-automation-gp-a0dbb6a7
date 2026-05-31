@@ -59,7 +59,7 @@ function Index() {
         <LeadMagnet />
         <UseCases />
         <Features />
-        <Industries />
+        <Industries onOpenBooking={open} />
         <CTA onOpenBooking={open} />
       </main>
 
