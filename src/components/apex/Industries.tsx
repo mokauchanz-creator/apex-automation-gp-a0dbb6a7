@@ -4,13 +4,16 @@ const IndustryCard = ({
   title,
   description,
   bgImage,
+  onLearnMore,
 }: {
   title: string;
   description: string;
   bgImage: string;
+  onLearnMore?: () => void;
 }) => (
   <div
     className="card-pad-mobile"
+
     style={{
       padding: "3rem",
       border: "1px solid rgba(255, 255, 255, 0.05)",
