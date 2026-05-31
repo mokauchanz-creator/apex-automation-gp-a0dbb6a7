@@ -146,6 +146,7 @@ export default function Industries({ onOpenBooking }: { onOpenBooking?: () => vo
               title="Law Firms"
               description="From contract drafting to due diligence, we automate the document-heavy workflows that consume your associates' billable hours — delivered before the workday begins."
               bgImage="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2000&auto=format&fit=crop"
+              onLearnMore={onOpenBooking}
             />
           </motion.div>
           <motion.div
@@ -158,7 +159,9 @@ export default function Industries({ onOpenBooking }: { onOpenBooking?: () => vo
               title="Private Clinics"
               description="Patient scheduling, medical scribing, billing automation — all handled overnight, HIPAA-compliant, so your clinical staff focuses entirely on patient care."
               bgImage="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop"
+              onLearnMore={onOpenBooking}
             />
+
           </motion.div>
         </div>
       </div>
