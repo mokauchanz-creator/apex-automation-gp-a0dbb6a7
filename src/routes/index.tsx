@@ -38,12 +38,14 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [isPlansOpen, setIsPlansOpen] = useState(false);
   const open = () => setIsBookingOpen(true);
+  const openPlans = () => setIsPlansOpen(true);
 
   return (
     <div>
       <CustomCursor />
-      <Navbar onOpenBooking={open} />
+      <Navbar onOpenBooking={open} onOpenPlans={openPlans} />
 
       <main>
         <div style={{ position: "relative" }}>
@@ -62,6 +64,8 @@ function Index() {
       </main>
 
       <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
+      <UsagePlansModal isOpen={isPlansOpen} onClose={() => setIsPlansOpen(false)} />
     </div>
   );
 }
+
