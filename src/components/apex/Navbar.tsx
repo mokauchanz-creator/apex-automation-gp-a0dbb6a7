@@ -14,13 +14,20 @@ function scrollTo(id: string) {
   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-export default function Navbar({ onOpenBooking }: { onOpenBooking: () => void }) {
+export default function Navbar({
+  onOpenBooking,
+  onOpenPlans,
+}: {
+  onOpenBooking: () => void;
+  onOpenPlans: () => void;
+}) {
   const [open, setOpen] = useState(false);
 
   const handleLink = (target: string) => {
     setOpen(false);
     setTimeout(() => scrollTo(target), 50);
   };
+
 
   return (
     <>
