@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "While you sleep, we deliver. Submit by 5 PM EST, ready by 9 AM EST — overnight automation for law firms, clinics, and professional services. HIPAA, GDPR, POPIA compliant.",
+          "While you sleep, we deliver. Submit by 5 PM SAST, ready by 9 AM SAST — overnight automation for South African law firms, clinics, and professional services. POPIA compliant.",
       },
       { property: "og:title", content: "Apex Automation — Overnight Automation for Professional Firms" },
       {
