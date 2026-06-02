@@ -77,7 +77,7 @@ export default function Calculator({ onOpenBooking }: { onOpenBooking: () => voi
   }, [staffCount, staffRate, billableRate, wastedHours]);
 
   const fmt = (v: number) =>
-    new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(v);
+    new Intl.NumberFormat("en-ZA", { style: "currency", currency: "ZAR", maximumFractionDigits: 0 }).format(v);
 
   return (
     <section
@@ -132,8 +132,8 @@ export default function Calculator({ onOpenBooking }: { onOpenBooking: () => voi
             }}
           >
             <Slider label="Staff Count" min={1} max={100} value={staffCount} onChange={setStaffCount} />
-            <Slider label="Staff Hourly Rate" min={10} max={200} value={staffRate} onChange={setStaffRate} prefix="$" />
-            <Slider label="Billable Hourly Rate" min={50} max={500} value={billableRate} onChange={setBillableRate} prefix="$" />
+            <Slider label="Staff Hourly Rate" min={10} max={200} value={staffRate} onChange={setStaffRate} prefix="R" />
+            <Slider label="Billable Hourly Rate" min={50} max={500} value={billableRate} onChange={setBillableRate} prefix="R" />
             <Slider label="Weekly Hours Wasted" min={1} max={40} value={wastedHours} onChange={setWastedHours} suffix=" hrs" />
           </motion.div>
 
