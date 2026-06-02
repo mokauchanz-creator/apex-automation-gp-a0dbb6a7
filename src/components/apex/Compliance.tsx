@@ -125,23 +125,17 @@ export default function Compliance() {
           }}
         >
           <ComplianceBadge
-            acronym="HIPAA"
-            fullName="Health Insurance Portability and Accountability Act"
-            bullets={["End-to-end PHI encryption", "BAA execution available", "Audit logging & access control"]}
-            delay={0.1}
-          />
-          <ComplianceBadge
-            acronym="GDPR"
-            fullName="General Data Protection Regulation"
-            bullets={["EU data residency options", "Right-to-be-forgotten automated", "Data processing agreements"]}
+            acronym="POPIA"
+            fullName="Protection of Personal Information Act — South Africa"
+            bullets={[
+              "Condition 7 security safeguards",
+              "Operator agreement compliance",
+              "Cross-border transfer rules met",
+              "Proudly serving South Africa only",
+            ]}
             delay={0.3}
           />
-          <ComplianceBadge
-            acronym="POPIA"
-            fullName="Protection of Personal Information Act"
-            bullets={["Condition 7 security safeguards", "Operator agreement compliance", "Cross-border transfer rules met"]}
-            delay={0.5}
-          />
+
         </div>
 
         <motion.div
