@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Ticker from "./Ticker";
 
 export default function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
   return (
@@ -116,7 +115,6 @@ export default function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
         </div>
       </div>
 
-      <Ticker />
     </section>
   );
 }
