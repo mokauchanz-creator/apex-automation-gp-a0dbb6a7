@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useRouterState } from "@tanstack/react-router";
+
 
 const links = [
   { label: "Process", target: "process" },
@@ -22,6 +24,19 @@ export default function Navbar({
   onOpenPlans: () => void;
 }) {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  const goHome = () => {
+    setOpen(false);
+    if (pathname !== "/") {
+      navigate({ to: "/" });
+      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
 
   const handleLink = (target: string) => {
     setOpen(false);
@@ -53,9 +68,14 @@ export default function Navbar({
           style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
         >
           <div
+            role="button"
+            tabIndex={0}
+            aria-label="Go to home"
             style={{ display: "flex", alignItems: "center", gap: "0.75rem", cursor: "pointer" }}
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={goHome}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); goHome(); } }}
           >
+
             <img
               src="https://5riyrv9yyd.ucarecd.net/1bcdf3bb-270b-4bfa-8f2f-df083d45bd19/-/preview/512x512/"
               alt="Apex Automation Logo"
@@ -185,9 +205,13 @@ export default function Navbar({
                 borderBottom: "1px solid rgba(255,255,255,0.05)",
               }}
             >
-              <span style={{ fontSize: "1.1rem", fontWeight: 500, letterSpacing: 1 }}>
+              <span
+                onClick={goHome}
+                style={{ fontSize: "1.1rem", fontWeight: 500, letterSpacing: 1, cursor: "pointer" }}
+              >
                 Apex<span style={{ color: "var(--color-gold)" }}>Automation</span>
               </span>
+
               <button
                 aria-label="Close menu"
                 onClick={() => setOpen(false)}
