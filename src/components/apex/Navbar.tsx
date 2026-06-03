@@ -24,6 +24,19 @@ export default function Navbar({
   onOpenPlans: () => void;
 }) {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  const goHome = () => {
+    setOpen(false);
+    if (pathname !== "/") {
+      navigate({ to: "/" });
+      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
 
   const handleLink = (target: string) => {
     setOpen(false);
