@@ -68,9 +68,14 @@ export default function Navbar({
           style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
         >
           <div
+            role="button"
+            tabIndex={0}
+            aria-label="Go to home"
             style={{ display: "flex", alignItems: "center", gap: "0.75rem", cursor: "pointer" }}
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={goHome}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); goHome(); } }}
           >
+
             <img
               src="https://5riyrv9yyd.ucarecd.net/1bcdf3bb-270b-4bfa-8f2f-df083d45bd19/-/preview/512x512/"
               alt="Apex Automation Logo"
