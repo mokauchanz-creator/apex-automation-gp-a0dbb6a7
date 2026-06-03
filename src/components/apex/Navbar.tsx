@@ -205,9 +205,13 @@ export default function Navbar({
                 borderBottom: "1px solid rgba(255,255,255,0.05)",
               }}
             >
-              <span style={{ fontSize: "1.1rem", fontWeight: 500, letterSpacing: 1 }}>
+              <span
+                onClick={goHome}
+                style={{ fontSize: "1.1rem", fontWeight: 500, letterSpacing: 1, cursor: "pointer" }}
+              >
                 Apex<span style={{ color: "var(--color-gold)" }}>Automation</span>
               </span>
+
               <button
                 aria-label="Close menu"
                 onClick={() => setOpen(false)}
